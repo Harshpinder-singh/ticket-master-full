@@ -23,7 +23,7 @@
   top: 50%;
   left: 57%;
   transform: translate(-50%,-50%);
-  animation: Fill 0.5s ease forwards 2.5s;
+  animation: Fill 0.9s ease forwards 2.9s;
   
   
 }
@@ -32,7 +32,7 @@
 #logo path:nth-child(1){
   stroke-dasharray: 380;
   stroke-dashoffset: 380;
-  animation: anim 3s ease forwards;
+  animation: anim 4s ease forwards;
 }
 @keyframes anim {
   to {

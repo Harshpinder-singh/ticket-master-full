@@ -24,7 +24,7 @@ class EmployeeList extends React.Component {
         }
     }
     removeHandle = (id) => {
-        axios.delete(`/employees/${id}`, {
+        axios.delete(`/api/employees/${id}`, {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }
@@ -44,7 +44,7 @@ class EmployeeList extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('/employees/', {
+        axios.get('/api/employees/', {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }

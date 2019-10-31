@@ -15,7 +15,7 @@ class TicketList extends React.Component {
         }
     }
     handleRemove = (id) => {
-        axios.delete(`/tickets/soft_delete/${id}`, {
+        axios.delete(`/api/tickets/soft_delete/${id}`, {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }
@@ -45,7 +45,7 @@ class TicketList extends React.Component {
             })
     }
     componentDidMount() {
-        axios.get('/tickets', {
+        axios.get('/api/tickets', {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }
@@ -76,7 +76,7 @@ class TicketList extends React.Component {
     checkHandle = (e, ticket) => {
         console.log(ticket)
         const body = { _id: ticket._id, isResolved: e.target.checked }
-        axios.put('/ticket/status', body, {
+        axios.put('/api/ticket/status', body, {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }

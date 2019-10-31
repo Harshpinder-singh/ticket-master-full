@@ -40,7 +40,7 @@ class Employeeform extends React.Component {
 
     }
     componentDidMount() {
-        axios.get('/departments/', {
+        axios.get('/api/departments/', {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }

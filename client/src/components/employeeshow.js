@@ -8,7 +8,7 @@ export default class EmployeeShow extends React.Component {
         email: ''
     }
     componentDidMount() {
-        axios.get(`/employees/${this.props.match.params.id}`, {
+        axios.get(`/api/employees/${this.props.match.params.id}`, {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }

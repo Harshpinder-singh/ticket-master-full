@@ -67,7 +67,7 @@ class Ticketnew extends React.Component {
             isResolved: this.state.isResolved
         }
 
-        axios.post('/tickets', ticket, {
+        axios.post('/api/tickets', ticket, {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }
@@ -106,7 +106,7 @@ class Ticketnew extends React.Component {
 
     }
     componentDidMount() {
-        axios.get('/departments/', {
+        axios.get('/api/departments/', {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }
@@ -119,7 +119,7 @@ class Ticketnew extends React.Component {
                 this.setState({ departments: array })
 
             })
-        axios.get('/customers/', {
+        axios.get('/api/customers/', {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }
@@ -133,7 +133,7 @@ class Ticketnew extends React.Component {
                 console.log(array)
 
             })
-        axios.get('/employees/', {
+        axios.get('/api/employees/', {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }

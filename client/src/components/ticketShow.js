@@ -14,7 +14,7 @@ class TicketShow extends React.Component {
     componentDidMount() {
         const id = this.props.match.params.id
 
-        axios.get(`/tickets/${id}`, {
+        axios.get(`/api/tickets/${id}`, {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }

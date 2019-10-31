@@ -20,7 +20,7 @@ class Departments extends React.Component {
     handleSubmit = (e) => {
         e.preventDefault()
         const depart = { name: this.state.name }
-        axios.post('/departments/', depart, {
+        axios.post('/api/departments/', depart, {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }
@@ -32,7 +32,7 @@ class Departments extends React.Component {
 
     }
     axiosUpdate() {
-        axios.get('/departments/', {
+        axios.get('/api/departments/', {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }
@@ -42,7 +42,7 @@ class Departments extends React.Component {
             })
     }
     removeHandle = (id) => {
-        axios.delete(`/departments/${id}`, {
+        axios.delete(`/api/departments/${id}`, {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }
@@ -62,7 +62,7 @@ class Departments extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('/departments/', {
+        axios.get('/api/departments/', {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }

@@ -6,7 +6,7 @@ class AddCustomer extends React.Component {
 
     customerAdd = (customer) => {
 
-        axios.post('/customers/', customer, {
+        axios.post('/api/customers/', customer, {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }

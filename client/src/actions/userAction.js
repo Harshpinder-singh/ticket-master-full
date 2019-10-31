@@ -13,7 +13,7 @@ export const removeUser = () => {
 
 export const startSetUser = (formData) => {
     return (dispatch) => {
-        axios.post('/login', formData)
+        axios.post('/api/login', formData)
             .then((response) => {
                 if (response.data._id) {
                     localStorage.setItem('token', response.data.token)

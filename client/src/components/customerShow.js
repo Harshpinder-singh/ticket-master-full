@@ -8,7 +8,7 @@ export default class customerShow extends React.Component {
         email: ''
     }
     componentDidMount() {
-        axios.get(`/customers/${this.props.match.params.id}`, {
+        axios.get(`/api/customers/${this.props.match.params.id}`, {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }

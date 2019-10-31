@@ -23,7 +23,7 @@ class Register extends React.Component {
             email: this.state.email,
             password: this.state.password
         }
-        axios.post("/register", body)
+        axios.post("/api/register", body)
             .then(response => {
                 if (response.data._id) {
                     console.log(response.data)

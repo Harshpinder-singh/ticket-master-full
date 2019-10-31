@@ -9,7 +9,7 @@ class AddEmployee extends React.Component {
     handleSubmit = (data) => {
 
 
-        axios.post('/employees', data, {
+        axios.post('/api/employees', data, {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }

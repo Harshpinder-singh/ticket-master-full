@@ -11,7 +11,7 @@ class EditEmployee extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(`/employees/${this.props.match.params.id}`, {
+        axios.get(`/api/employees/${this.props.match.params.id}`, {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }
@@ -26,7 +26,7 @@ class EditEmployee extends React.Component {
 
     handleSubmit = (data) => {
         console.log("handlesubmit wala   ", data)
-        axios.put(`/employees/${data.id}`, { name: data.name, email: data.email, mobile: data.mobile, departmentId: data.departmentId }, {
+        axios.put(`/api/employees/${data.id}`, { name: data.name, email: data.email, mobile: data.mobile, departmentId: data.departmentId }, {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }

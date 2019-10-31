@@ -14,7 +14,7 @@ class Customers extends React.Component {
         }
     }
     componentDidMount() {
-        axios.get('/customers/', {
+        axios.get('/api/customers/', {
             headers: {
                 'x-auth': localStorage.getItem('token')
             }
@@ -30,7 +30,7 @@ class Customers extends React.Component {
     }
     removeCustomer = (id) => {
         if (window.confirm('are want to remove this record ?')) {
-            axios.delete(`/customers/${id}`, {
+            axios.delete(`/api/customers/${id}`, {
                 headers: {
                     'x-auth': localStorage.getItem('token')
                 }
